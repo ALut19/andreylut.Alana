@@ -2,9 +2,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Created by Andrey Lut
+ * Created by Аедрей Лут
  */
-public class Task2CalculatorAndWords {
+public class Task3CalculatorAndWords {
     public static void main(String[] args) {
 
         Scanner choise = new Scanner(System.in);
@@ -14,9 +14,9 @@ public class Task2CalculatorAndWords {
             button = choise.nextInt();
 
             if (button == 1) {
-                Task2CalculatorAndWords.ArrayWords();
+                Task3CalculatorAndWords.ArrayWords();
             } else if (button == 2) {
-                Task2CalculatorAndWords.Calculator();
+                Task3CalculatorAndWords.Calculator();
             } else if (button!=2 || button!=1)
                 break;
 
