@@ -4,6 +4,9 @@ package Gift;
  * Created by user on 17.10.2017.
  */
 public abstract class GiftParam {
+    public static int totalWeight = 0;
+    public static int totalPrice = 0;
+
     private String name;
     private int price;
     private int weight;
@@ -40,6 +43,13 @@ public abstract class GiftParam {
         this.weight = weight;
     }
 
+    public static int gettotalWeight() {
+        return totalWeight;
+    }
+
+    public static int gettotalPrice() {
+        return totalPrice;
+    }
 
     @Override
     public String toString() {

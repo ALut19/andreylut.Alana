@@ -9,6 +9,8 @@ public class Cookies extends GiftParam {
 
     public Cookies(String name, int price, int weight, String cookiesType) {
         super(name, price, weight);
+        totalWeight += weight;
+        totalPrice += price;
         this.cookiesType = cookiesType;
     }
 
