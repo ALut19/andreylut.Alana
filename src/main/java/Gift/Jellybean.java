@@ -9,6 +9,8 @@ public class Jellybean extends GiftParam {
 
     public Jellybean(String name, int price, int weight, String jellybeanType) {
         super(name, price, weight);
+        totalWeight += weight;
+        totalPrice += price;
         this.jellybeanType = jellybeanType;
     }
 

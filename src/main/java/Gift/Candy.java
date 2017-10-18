@@ -9,6 +9,8 @@ public class Candy extends GiftParam {
 
     public Candy(String name, int price, int weight, String candyType) {
         super(name, price, weight);
+        totalWeight += weight;
+        totalPrice += price;
         this.candyType = candyType;
     }
 
