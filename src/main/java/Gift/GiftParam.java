@@ -45,5 +45,16 @@ public abstract class GiftParam {
     public String toString() {
         return "name = " + name + ", price = " + price + ", weight = " + weight;
     }
+
+  /*  public static void testArray() {
+        int myArray[] = {};
+        int sum=0;
+        for(int i=0; i<myArray.length; i++) {
+            sum=sum+myArray[i];
+        }
+        System.out.println(sum);
+    }*/
+
 }
+
 
