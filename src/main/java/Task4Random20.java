@@ -7,8 +7,8 @@ public class Task4Random20 {
         int min = 0;
         int[] array = new int[20];
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) Math.round((Math.random() * 21) - 10);
+        for (int i = 0; i < array.length  ; i++) {
+            array[i] = (int) Math.round((Math.random() * 20) - 10);
             System.out.println(array[i]);
 
             if(array[i] > max){
