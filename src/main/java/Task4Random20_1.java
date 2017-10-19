@@ -7,16 +7,10 @@ import java.util.Arrays;
 
 public class Task4Random20_1 {
     public static void main(String[] args) {
-    /*    Random rnd = new Random();
-        int b = 0;
 
-        int a = rnd.nextInt(20)-10;
-        System.out.println(b); */
         int[] arr = new int[20];
         fillRandom(arr, 21);
         System.out.println(Arrays.toString(arr));
-
-
     }
 
     public static void fillRandom(int[] arr, int n) {
