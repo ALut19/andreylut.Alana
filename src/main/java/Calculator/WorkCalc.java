@@ -1,7 +1,5 @@
 package Calculator;
 
-import Calculator.Calculator;
-
 import java.util.Scanner;
 
 /**
@@ -11,17 +9,17 @@ public class WorkCalc {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Calculator calc = new Calculator ();
 
-        Calculator Calcul = new Calculator(10,15,
-                "+");
-        Calculator c2 = new Calculator(input.nextDouble(),input.nextDouble(),input.next());
+        System.out.println("Enter first number");
+        calc.setFirst (input.nextDouble());
+        System.out.println("Enter one of this operators: \n+\n-\n*\n/");
+        calc.setAction (input.next ());
+        System.out.println("Enter second number");
+        calc.setSecond (input.nextDouble());
 
+        calc.operation ();
 
-   //     Calcul.setfirst(input.nextDouble());
-
-        Calcul.calcplus();
-        c2.calcplus();
+        System.out.println ("Result is: " + calc.getResult());
     }
-
-    }
-
+}
