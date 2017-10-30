@@ -13,12 +13,14 @@ public class WorkCalc {
 
         System.out.println("Enter first number");
         calc.setFirst (input.nextDouble());
+
         System.out.println("Enter one of this operators: \n+\n-\n*\n/");
         calc.setAction (input.next ());
+
         System.out.println("Enter second number");
         calc.setSecond (input.nextDouble());
 
-        calc.operation ();
+        calc.operation();
 
         System.out.println ("Result is: " + calc.getResult());
     }
