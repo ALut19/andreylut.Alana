@@ -1,5 +1,6 @@
 package Calculator;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -9,19 +10,26 @@ public class WorkCalc {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Calculator calc = new Calculator ();
+        Calculator calc = new Calculator();
 
-        System.out.println("Enter first number");
-        calc.setFirst (input.nextDouble());
+            try {
+                System.out.println("Enter first number");
+                calc.setFirst(input.nextDouble());
 
-        System.out.println("Enter one of this operators: \n+\n-\n*\n/");
-        calc.setAction (input.next ());
+                System.out.println("Enter one of this operators: \n+\n-\n*\n/");
+                calc.setAction(input.next());
 
-        System.out.println("Enter second number");
-        calc.setSecond (input.nextDouble());
+                System.out.println("Enter second number");
+                calc.setSecond(input.nextDouble());
 
-        calc.operation();
+                // Exception отлавливающий неправильный ввод
+            } catch (InputMismatchException e) {
+                e.fillInStackTrace();
+            }
 
-        System.out.println ("Result is: " + calc.getResult());
+            calc.operation();
+
+            System.out.println("Result is: " + calc.getResult());
+       }
     }
-}
+

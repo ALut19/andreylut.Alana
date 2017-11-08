@@ -29,6 +29,7 @@ public class Calculator {
         }
     }
 
+
     public void setFirst(double first) {
         this.first = first;
     }
