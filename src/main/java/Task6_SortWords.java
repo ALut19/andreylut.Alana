@@ -42,6 +42,5 @@ public class Task6_SortWords{
         }
         System.out.println(stat);
         System.out.println("Слово с максимальным количеством повторений: " + wordsList + ", встречается " + maxRepWorld + raz);
-
     }
 }
