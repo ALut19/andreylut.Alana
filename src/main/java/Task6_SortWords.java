@@ -1,8 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.Collections;
-
 
 public class Task6_SortWords{
 
@@ -20,11 +18,11 @@ public class Task6_SortWords{
         Integer maxRepWorld = 0;
 
         Map<String, Integer> stat = new TreeMap<>();
+        new ArrayList<>(stat.keySet());
 
         while (scanner.hasNext()) {
             String wordsFromDoc = scanner.useDelimiter("\\s+").next();
             Integer countWord = stat.get(wordsFromDoc);
-            Collections.sort(wordsList);
 
             if (countWord == null) {
                 countWord = 0;
