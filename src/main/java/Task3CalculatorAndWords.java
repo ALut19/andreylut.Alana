@@ -8,18 +8,20 @@ public class Task3CalculatorAndWords {
     public static void main(String[] args) {
 
         Scanner choise = new Scanner(System.in);
-        int button = 0;
+        int button;
+
         while (true) {
-            System.out.println("Please enter: \n1 - for ArrayWords; \n2 - for Calculator");
+            System.out.println("Please enter: \n1 - for ArrayWords; \n2 - for Calculator; \n0 - For exit ");
             button = choise.nextInt();
 
             if (button == 1) {
                 Task3CalculatorAndWords.ArrayWords();
             } else if (button == 2) {
                 Task3CalculatorAndWords.Calculator();
-            } else if (button!=2 || button!=1)
+            }
+            else if (button == 0)
                 break;
-
+            else System.out.println("no!");
         }
     }
 
