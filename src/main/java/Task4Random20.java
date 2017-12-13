@@ -1,8 +1,6 @@
 public class Task4Random20 {
     public static void main(String[] args) {
 
-        double b = 10.56;
-
         int max = 0;
         int min = 0;
         int[] array = new int[20];
@@ -17,6 +15,12 @@ public class Task4Random20 {
                 min = array[i];
             }
         }
+
+        //меняю местами max и min
+        max = min + max;
+        min = max - min;
+        max = max - min;
+
         System.out.println("min " + min);
         System.out.println("max " + max);
     }
