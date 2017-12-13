@@ -2,17 +2,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-import static java.util.Collections.sort;
-
-
 public class Task6_SortWords{
 
     public static void main(String[] args) {
-/*
-    {
         Scanner scanner = null;
+        String raz = null;
+
         try {
-            scanner = new Scanner(new File("C:\\Java\\andreylut\\src\\main\\java\\Attachments\\doc.txt"));
+            scanner = new Scanner(new File("C:\\Users\\user\\IdeaProjects\\andreylut.Alana\\src\\main\\java\\Attachments\\doc.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -21,25 +18,29 @@ public class Task6_SortWords{
         Integer maxRepWorld = 0;
 
         Map<String, Integer> stat = new TreeMap<>();
+        new ArrayList<>(stat.keySet());
 
         while (scanner.hasNext()) {
             String wordsFromDoc = scanner.useDelimiter("\\s+").next();
             Integer countWord = stat.get(wordsFromDoc);
-            if (countWord == 0) {
+
+            if (countWord == null) {
                 countWord = 0;
             }
             stat.put(wordsFromDoc, ++countWord);
 
-            if (maxRepWorld < countWord){
+            if (maxRepWorld < countWord) {
                 maxRepWorld = countWord;
                 wordsList.clear();
                 wordsList.add(wordsFromDoc);
+                if (maxRepWorld < 5 | maxRepWorld <= 1) {
+                    raz = " раза";
+                }else {
+                    raz = " раз";
+                }
             }
         }
         System.out.println(stat);
-        System.out.println("Word that repeats most often is: " + wordsList);
-        System.out.println("Word with maximum repeats: " + maxRepWorld);
-    }*/
+        System.out.println("Слово с максимальным количеством повторений: " + wordsList + ", встречается " + maxRepWorld + raz);
     }
 }
-
